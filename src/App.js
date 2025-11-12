@@ -8,7 +8,7 @@ import Skills from './containers/skills';
 import Portfolio from './containers/portfolio';
 import Contact from './containers/contact';
 import Navbar from './components/Navbar';
-import ParticlesComponent from './particles';
+import ParticlesComponent from './utils.js/particles.js';
 
 
 function App() {
