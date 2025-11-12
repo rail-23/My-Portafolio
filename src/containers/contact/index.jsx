@@ -49,17 +49,29 @@ const Contact = () => {
           <span>Instagram</span>
         </a>
 
-        <a
-          href="https://facebook.com/rail.gonzales.aldana"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Facebook"
-          className="contact__card"
-          style={{ animationDelay: "0.6s" }}
-        >
-          <FaFacebook className="contact__icon" />
-          <span>Facebook</span>
-        </a>
+<a
+  href="https://www.facebook.com/rail.gonzales.aldana.2025"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Facebook"
+  className="contact__card"
+  style={{ animationDelay: "0.6s" }}
+>
+  <FaFacebook className="contact__icon" />
+  <span>Facebook</span>
+</a>
+<a
+  href="https://www.facebook.com/rail.gonzales.aldana.2025"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Facebook"
+  className="contact__card"
+  style={{ animationDelay: "0.6s" }}
+>
+  <FaFacebook className="contact__icon" />
+  <span>Facebook</span>
+</a>
+
 
         <a
           href="mailto:railgonzalesaldana603@gmail.com"
