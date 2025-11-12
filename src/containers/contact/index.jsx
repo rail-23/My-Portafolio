@@ -2,10 +2,7 @@ import React from "react";
 import PageHeaderContent from "../../components/pageHeaderContent";
 import { BsInfoCircleFill } from "react-icons/bs";
 import { FaWhatsapp, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
-// Opción A
 import { FaTiktok } from "react-icons/fa6";
-// Opción B si no tienes fa6:
-// import { SiTiktok as FaTiktok } from "react-icons/si";
 import "./styles.scss";
 
 const Contact = () => {

@@ -43,13 +43,7 @@
     margin-bottom: 10px;
   }
 
-  // Evitar que el color cambie en links visitados
-  a:visited {
-    color: inherit;
-  }
-}
 
-// Animación suave
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -61,7 +55,7 @@
   }
 }
 
-// Responsive para móviles
+
 @media (max-width: 600px) {
   .contact__cards {
     grid-template-columns: 1fr;
