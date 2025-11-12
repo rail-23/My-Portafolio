@@ -50,7 +50,7 @@ const Contact = () => {
         </a>
 
         <a
-          href="https://facebook.com/RailGonzalesAldana"
+          href="https://facebook.com/rail.gonzales.aldana"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
