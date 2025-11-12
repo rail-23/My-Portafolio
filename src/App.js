@@ -8,7 +8,8 @@ import Skills from './containers/skills';
 import Portfolio from './containers/portfolio';
 import Contact from './containers/contact';
 import Navbar from './components/Navbar';
-import ParticlesComponent from './components/particles'; 
+import ParticlesComponent from './particles';
+
 
 function App() {
   const location = useLocation();
