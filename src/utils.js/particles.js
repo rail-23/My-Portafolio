@@ -1,8 +1,19 @@
 import Particles from "@tsparticles/react";
 import { useCallback, useMemo } from "react";
-
+import { loadSlim } from "@tsparticles/slim"; // carga la versión ligera del motor
 
 const ParticlesComponent = ({ id }) => {
+  // Inicializa el motor de partículas una sola vez
+  const particlesInit = useCallback(async (engine) => {
+    await loadSlim(engine);
+  }, []);
+
+  // Se ejecuta cuando las partículas se cargan (puedes dejarlo vacío)
+  const particlesLoaded = useCallback(async (container) => {
+    console.log("Particles loaded:", container);
+  }, []);
+
+  // Configuración visual de las partículas
   const options = useMemo(
     () => ({
       background: { color: { value: "black" } },
@@ -44,10 +55,14 @@ const ParticlesComponent = ({ id }) => {
     []
   );
 
-  const init = useCallback(particlesInit, []);
-  const loaded = useCallback(particlesLoaded, []);
-
-  return <Particles id={id ?? "tsparticles"} init={init} loaded={loaded} options={options} />;
+  return (
+    <Particles
+      id={id ?? "tsparticles"}
+      init={particlesInit}
+      loaded={particlesLoaded}
+      options={options}
+    />
+  );
 };
 
 export default ParticlesComponent;
