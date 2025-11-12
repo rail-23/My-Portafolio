@@ -1,6 +1,6 @@
 import Particles from "@tsparticles/react";
 import { useCallback, useMemo } from "react";
-import { particlesInit, particlesLoaded } from "../utils/particles"; // Ajusta la ruta si es diferente
+
 
 const ParticlesComponent = ({ id }) => {
   const options = useMemo(
