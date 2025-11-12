@@ -1,0 +1,126 @@
+.home {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensure container takes full width */
+    padding: 0 15px; /* Add padding to prevent edge clipping */
+    box-sizing: border-box; /* Include padding in width calculation */
+
+    h1 {
+      color: var(--yellow-theme-main-color);
+      margin: 0;
+      font-weight: 500;
+      font-size: 6rem; /* Reduced default size for better scaling */
+      line-height: 7rem;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap; /* Keep nowrap for typing effect on larger screens */
+      animation: typingEffectAnimation 2.5s steps(30, end);
+    }
+  }
+
+  &__contact_me {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    button {
+      cursor: pointer;
+      padding: 10px 70px;
+      font-size: 2rem;
+      background: transparent;
+      color: var(--yellow-theme-main-color);
+      border: 1.5px solid var(--yellow-theme-main-color);
+      border-radius: 4px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: var(--yellow-theme-main-color);
+        color: #000000;
+      }
+    }
+  }
+}
+
+/* Extra small screens (e.g., Tecno Spark, ~360px–480px) */
+@media only screen and (max-width: 480px) {
+  .home__text-wrapper h1 {
+    font-size: 2.5rem; /* Smaller font size for very small screens */
+    line-height: 3.5rem;
+    white-space: normal; /* Allow text wrapping */
+    overflow: visible; /* Prevent clipping */
+    animation: typingEffectAnimationMobile 2.5s ease-in-out; /* Adjusted animation */
+  }
+
+  .home__contact_me button {
+    padding: 8px 30px;
+    font-size: 1.4rem;
+  }
+}
+
+/* Small screens (481px–550px) */
+@media only screen and (min-width: 481px) and (max-width: 550px) {
+  .home__text-wrapper h1 {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+    white-space: normal; /* Allow wrapping */
+    overflow: visible;
+  }
+
+  .home__contact_me button {
+    padding: 8px 40px;
+    font-size: 1.6rem;
+  }
+}
+
+/* Medium screens (551px–768px) */
+@media only screen and (min-width: 551px) and (max-width: 768px) {
+  .home__text-wrapper h1 {
+    font-size: 4.5rem;
+    line-height: 5.5rem;
+    white-space: normal; /* Allow wrapping for better fit */
+  }
+}
+
+/* Larger screens (769px–990px) */
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  .home__text-wrapper h1 {
+    font-size: 5.5rem;
+    line-height: 7rem;
+  }
+}
+
+/* Typing effect for larger screens */
+@keyframes typingEffectAnimation {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+/* Adjusted typing effect for mobile to avoid clipping */
+@keyframes typingEffectAnimationMobile {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
